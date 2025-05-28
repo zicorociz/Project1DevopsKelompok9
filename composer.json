@@ -1,0 +1,18 @@
+{
+    "name": "lenovo/project1devops-kelompok9",
+    "description": "lenovo/project1devops-kelompok9",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lenovo\\Project1devopsKelompok9\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "zicorociz",
+            "email": "khaliszikrul16@gmail.com"
+        }
+    ],
+    "require": {}
+}
