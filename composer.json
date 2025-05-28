@@ -14,5 +14,10 @@
             "email": "khaliszikrul16@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "9.5"
+    },
+    "scripts": {
+        "phpunit": "vendor/bin/phpunit"
+    }
 }
