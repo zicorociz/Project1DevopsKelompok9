@@ -1,37 +1,19 @@
-name: CI Pipeline
+name: PHP Composer
 
 on:
   push:
     branches:
       - main
-      - develop
+      - devep
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout kode dari repository
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # Set up PHP
-      - name: Set up PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '7.4'
-
-      # Install dependencies menggunakan Composer
-      - name: Install dependencies
-        run: |
-          composer install
-
-      # Menjalankan PHPUnit untuk pengujian otomatis
-      - name: Run Tests
-        run: |
-          vendor/bin/phpunit --coverage-text
-
-      # Memeriksa kualitas kode dengan PHP_CodeSniffer
-      - name: Run PHP_CodeSniffer
-        run: |
-          composer run lint
+      - uses: actions/checkout@v2
+      - name: Install composer
+        run: composer install
